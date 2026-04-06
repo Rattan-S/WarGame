@@ -10,7 +10,7 @@ package ca.sheridancollege.project;
  */
 public class WarCard extends Card {
     private String suit;
-    private int rank;
+    private int rank; // Let's use 2-14 where 11=Jack, 12=Queen, 13=King, 14=Ace
 
     public WarCard(String suit, int rank) {
         this.suit = suit;
@@ -27,6 +27,14 @@ public class WarCard extends Card {
 
     @Override
     public String toString() {
-        return rank + " of " + suit;
+        String rankString;
+        switch (rank) {
+            case 11: rankString = "Jack"; break;
+            case 12: rankString = "Queen"; break;
+            case 13: rankString = "King"; break;
+            case 14: rankString = "Ace"; break;
+            default: rankString = String.valueOf(rank); break;
+        }
+        return rankString + " of " + suit;
     }
 }
