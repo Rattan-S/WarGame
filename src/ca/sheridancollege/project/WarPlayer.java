@@ -6,21 +6,22 @@ public class WarPlayer extends Player {
 
     public WarPlayer(String name) {
         super(name);
-        // Initialize piles, assuming a standard deck split might happen in Game
-        this.playerPile = new GroupOfCards(26); 
-        this.wonPile = new GroupOfCards(52);
+        // Initialize their empty piles
+        playerPile = new GroupOfCards(0);
+        wonPile = new GroupOfCards(0);
+    }
+
+    public GroupOfCards getPlayerPile() {
+        return playerPile;
+    }
+
+    public GroupOfCards getWonPile() {
+        return wonPile;
     }
 
     @Override
     public void play() {
-        // Logic to play a card will go here
-    }
-    
-    public GroupOfCards getPlayerPile() {
-        return this.playerPile;
-    }
-
-    public GroupOfCards getWonPile() {
-        return this.wonPile;
+        // In War, "playing" just means we will pop a card off the playerPile
+        // We will handle the actual logic in the WarGame class to keep it cohesive!
     }
 }
