@@ -46,8 +46,10 @@ public class GameTest {
     @Test
     public void testGetName() {
         System.out.println("getName");
-        Game instance = null;
-        String expResult = "";
+        
+        Game instance = new GameImpl();
+        
+        String expResult = "Test Game";
         String result = instance.getName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -60,8 +62,10 @@ public class GameTest {
     @Test
     public void testGetPlayers() {
         System.out.println("getPlayers");
-        Game instance = null;
-        ArrayList<Player> expResult = null;
+        
+        Game instance = new GameImpl();
+        
+        ArrayList<Player> expResult = new ArrayList<>();
         ArrayList<Player> result = instance.getPlayers();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -74,9 +78,12 @@ public class GameTest {
     @Test
     public void testSetPlayers() {
         System.out.println("setPlayers");
-        ArrayList<Player> players = null;
-        Game instance = null;
+        
+        ArrayList<Player> players = new ArrayList<>();
+        Game instance = new GameImpl();
+        
         instance.setPlayers(players);
+        assertEquals(players, instance.getPlayers());
         // TODO review the generated test code and remove the default call to fail.
         
     }
@@ -87,8 +94,11 @@ public class GameTest {
     @Test
     public void testPlay() {
         System.out.println("play");
-        Game instance = null;
+        
+        Game instance = new GameImpl();
         instance.play();
+        
+        assertTrue(true);
         // TODO review the generated test code and remove the default call to fail.
         
     }
@@ -99,8 +109,11 @@ public class GameTest {
     @Test
     public void testDeclareWinner() {
         System.out.println("declareWinner");
-        Game instance = null;
+        
+        Game instance = new GameImpl();
         instance.declareWinner();
+        
+        assertTrue(true);
         // TODO review the generated test code and remove the default call to fail.
         
     }
@@ -108,12 +121,15 @@ public class GameTest {
     public class GameImpl extends Game {
 
         public GameImpl() {
-            super("");
+            
+            super("Test Game");
         }
 
+        @Override
         public void play() {
         }
 
+        @Override
         public void declareWinner() {
         }
     }

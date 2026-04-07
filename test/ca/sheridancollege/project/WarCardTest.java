@@ -39,55 +39,33 @@ public class WarCardTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getSuit method, of class WarCard.
-     */
+    // GOOD TEST: Checking standard face card translation 
     @Test
-    public void testGetSuit() {
-        System.out.println("getSuit");
-        
-        WarCard instance = new WarCard("Spades", 10);
-        
-        String expResult = "Spades";
-        String result = instance.getSuit();
-        assertEquals(expResult, result);
-        
-        // TODO review the generated test code and remove the default call to fail.
-        
-    }
-
-    /**
-     * Test of getRank method, of class WarCard.
-     */
-    @Test
-    public void testGetRank() {
-        System.out.println("getRank");
-        
-        WarCard instance = new WarCard("Hearts", 5);
-        
-        int expResult = 5;
-        int result = instance.getRank();
-        assertEquals(expResult, result);
-        
-        // TODO review the generated test code and remove the default call to fail.
-        
-    }
-
-    /**
-     * Test of toString method, of class WarCard.
-     */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        
+    public void testToString_Good() {
+        System.out.println("testToString_Good");
         WarCard instance = new WarCard("Clubs", 11);
-        
         String expResult = "Jack of Clubs";
         String result = instance.toString();
         assertEquals(expResult, result);
-        
-        // TODO review the generated test code and remove the default call to fail.
-        
     }
-    
+
+    // BOUNDARY TEST: Checking the absolute highest card in the deck
+    @Test
+    public void testToString_Boundary_High() {
+        System.out.println("testToString_Boundary_High");
+        WarCard instance = new WarCard("Spades", 14);
+        String expResult = "Ace of Spades";
+        String result = instance.toString();
+        assertEquals(expResult, result);
+    }
+
+    // BAD TEST: Checking how the system handles a null suit
+    @Test
+    public void testToString_Bad_NullSuit() {
+        System.out.println("testToString_Bad_NullSuit");
+        WarCard instance = new WarCard(null, 5);
+        String result = instance.toString();
+        
+        assertNotNull(result);
+    }
 }

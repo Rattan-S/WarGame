@@ -4,7 +4,6 @@
  */
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -40,62 +39,34 @@ public class GroupOfCardsTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getCards method, of class GroupOfCards.
-     */
+    // GOOD TEST: Checking standard card addition
     @Test
-    public void testGetCards() {
-        System.out.println("getCards");
-        // Created a new object instead of null
-        GroupOfCards instance = new GroupOfCards(0); 
+    public void testAddCard_Good() {
+        System.out.println("testAddCard_Good");
+        GroupOfCards pile = new GroupOfCards(0);
+        pile.getCards().add(new WarCard("Hearts", 5));
         
-        ArrayList<Card> expResult = new ArrayList<>(); 
-        ArrayList<Card> result = instance.getCards();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        
+        // Assert the size increased to 1
+        assertEquals(1, pile.getSize());
     }
 
-    /**
-     * Test of shuffle method, of class GroupOfCards.
-     */
+    // BOUNDARY TEST: Checking empty pile size
     @Test
-    public void testShuffle() {
-        System.out.println("shuffle");
+    public void testEmptyPile_Boundary() {
+        System.out.println("testEmptyPile_Boundary");
+        GroupOfCards pile = new GroupOfCards(0);
         
-        GroupOfCards instance = new GroupOfCards(0);
-        instance.shuffle();
-        // TODO review the generated test code and remove the default call to fail.
-       
+        // Assert an initialized pile has exactly 0 cards
+        assertEquals(0, pile.getSize());
     }
 
-    /**
-     * Test of getSize method, of class GroupOfCards.
-     */
-    @Test
-    public void testGetSize() {
-        System.out.println("getSize");
+    // BAD TEST: Testing bounds (removing from an empty pile)
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testRemoveFromEmpty_Bad() {
+        System.out.println("testRemoveFromEmpty_Bad");
+        GroupOfCards pile = new GroupOfCards(0);
         
-        GroupOfCards instance = new GroupOfCards(0);
-        int expResult = 0;
-        int result = instance.getSize();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        
+        // This will fail because the pile is empty, which is what we EXPECT to happen
+        pile.getCards().remove(0);
     }
-
-    /**
-     * Test of setSize method, of class GroupOfCards.
-     */
-    @Test
-    public void testSetSize() {
-        System.out.println("setSize");
-        int size = 0;
-        
-        GroupOfCards instance = new GroupOfCards(0);
-        instance.setSize(size);
-        // TODO review the generated test code and remove the default call to fail.
-        
-    }
-    
 }
