@@ -46,9 +46,9 @@ public class GroupOfCardsTest {
     @Test
     public void testGetCards() {
         System.out.println("getCards");
-        // FIX: Created a new object instead of null
+        // Created a new object instead of null
         GroupOfCards instance = new GroupOfCards(0); 
-        // FIX: Replaced null with an empty ArrayList so the assertion passes
+        
         ArrayList<Card> expResult = new ArrayList<>(); 
         ArrayList<Card> result = instance.getCards();
         assertEquals(expResult, result);
@@ -62,7 +62,7 @@ public class GroupOfCardsTest {
     @Test
     public void testShuffle() {
         System.out.println("shuffle");
-        // FIX: Created a new object instead of null
+        
         GroupOfCards instance = new GroupOfCards(0);
         instance.shuffle();
         // TODO review the generated test code and remove the default call to fail.
@@ -75,7 +75,7 @@ public class GroupOfCardsTest {
     @Test
     public void testGetSize() {
         System.out.println("getSize");
-        // FIX: Created a new object instead of null
+        
         GroupOfCards instance = new GroupOfCards(0);
         int expResult = 0;
         int result = instance.getSize();
@@ -91,7 +91,7 @@ public class GroupOfCardsTest {
     public void testSetSize() {
         System.out.println("setSize");
         int size = 0;
-        // FIX: Created a new object instead of null
+        
         GroupOfCards instance = new GroupOfCards(0);
         instance.setSize(size);
         // TODO review the generated test code and remove the default call to fail.

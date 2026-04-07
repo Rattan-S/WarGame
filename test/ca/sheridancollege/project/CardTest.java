@@ -46,25 +46,23 @@ public class CardTest {
     public void testToString() {
         System.out.println("toString");
         
-        // NetBeans uses the temporary CardImpl class below to test the abstract Card class
+        
         Card instance = new CardImpl();
         
-        // FIX: Set the expected result to match what the CardImpl returns
+        
         String expResult = "Fake Test Card"; 
         String result = instance.toString();
         
         assertEquals(expResult, result);
-        
-        // TODO review the generated test code and remove the default call to fail.
-        // FIX: Removed the fail() call so the test passes
+
     }
 
-    // NetBeans auto-generated this concrete class specifically for testing
+
     public class CardImpl extends Card {
 
         @Override
         public String toString() {
-            // FIX: Added a return string to test against
+            
             return "Fake Test Card"; 
         }
     }

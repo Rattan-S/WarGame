@@ -46,10 +46,8 @@ public class PlayerTest {
     public void testGetName() {
         System.out.println("getName");
         
-        // FIX: Use the auto-generated PlayerImpl instead of null
         Player instance = new PlayerImpl();
-        
-        // FIX: Expect the name we hardcoded into the PlayerImpl constructor below
+
         String expResult = "Test Player";
         String result = instance.getName();
         assertEquals(expResult, result);
@@ -64,15 +62,12 @@ public class PlayerTest {
     @Test
     public void testSetName() {
         System.out.println("setName");
-        
-        // FIX: Provide a new name to test
+
         String name = "New Rattan";
         
-        // FIX: Create the object instead of using null
         Player instance = new PlayerImpl();
         instance.setName(name);
         
-        // FIX: Assert that the name successfully changed to the new one
         assertEquals(name, instance.getName());
         
         // TODO review the generated test code and remove the default call to fail.
@@ -85,25 +80,20 @@ public class PlayerTest {
     @Test
     public void testPlay() {
         System.out.println("play");
-        
-        // FIX: Create the object instead of using null
+
         Player instance = new PlayerImpl();
-        
-        // Run the play method (which does nothing in the test class)
         instance.play();
         
-        // If it runs without crashing, it passes!
         assertTrue(true);
         
         // TODO review the generated test code and remove the default call to fail.
         
     }
 
-    // NetBeans auto-generated this concrete class specifically for testing
     public class PlayerImpl extends Player {
 
         public PlayerImpl() {
-            // FIX: Added a default name so the getName() test has something to verify
+
             super("Test Player");
         }
 

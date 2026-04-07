@@ -46,10 +46,8 @@ public class WarCardTest {
     public void testGetSuit() {
         System.out.println("getSuit");
         
-        // FIX: Create a real WarCard object instead of null
         WarCard instance = new WarCard("Spades", 10);
         
-        // FIX: Set the expected result to match the suit we gave the card
         String expResult = "Spades";
         String result = instance.getSuit();
         assertEquals(expResult, result);
@@ -65,10 +63,8 @@ public class WarCardTest {
     public void testGetRank() {
         System.out.println("getRank");
         
-        // FIX: Create a real WarCard object instead of null
         WarCard instance = new WarCard("Hearts", 5);
         
-        // FIX: Set the expected result to match the rank we gave the card
         int expResult = 5;
         int result = instance.getRank();
         assertEquals(expResult, result);
@@ -84,10 +80,8 @@ public class WarCardTest {
     public void testToString() {
         System.out.println("toString");
         
-        // FIX: Create a real WarCard object. Remember from our game logic, 11 = Jack!
         WarCard instance = new WarCard("Clubs", 11);
         
-        // FIX: Expected result should match how the toString method formats it
         String expResult = "Jack of Clubs";
         String result = instance.toString();
         assertEquals(expResult, result);

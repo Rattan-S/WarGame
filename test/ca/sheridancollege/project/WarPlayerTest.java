@@ -46,10 +46,8 @@ public class WarPlayerTest {
     public void testGetPlayerPile() {
         System.out.println("getPlayerPile");
         
-        // FIX: Create a real WarPlayer instead of null
         WarPlayer instance = new WarPlayer("Rattan");
         
-        // FIX: Get the pile and check that it actually exists and starts at size 0
         GroupOfCards result = instance.getPlayerPile();
         assertNotNull(result);
         assertEquals(0, result.getSize());
@@ -65,10 +63,8 @@ public class WarPlayerTest {
     public void testGetWonPile() {
         System.out.println("getWonPile");
         
-        // FIX: Create a real WarPlayer instead of null
         WarPlayer instance = new WarPlayer("Rattan");
         
-        // FIX: Get the won pile and check that it actually exists and starts at size 0
         GroupOfCards result = instance.getWonPile();
         assertNotNull(result);
         assertEquals(0, result.getSize());
@@ -83,14 +79,11 @@ public class WarPlayerTest {
     @Test
     public void testPlay() {
         System.out.println("play");
-        
-        // FIX: Create a real WarPlayer instead of null
         WarPlayer instance = new WarPlayer("Rattan");
         
         // Run the play method
         instance.play();
         
-        // If it runs without crashing, it passes!
         assertTrue(true);
         
         // TODO review the generated test code and remove the default call to fail.

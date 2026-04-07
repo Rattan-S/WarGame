@@ -46,17 +46,13 @@ public class WarGameTest {
     public void testPlay() {
         System.out.println("play");
         
-        // FIX: Create a real WarGame object instead of null
         WarGame instance = new WarGame("Test Game");
         
-        // FIX: The game needs exactly 2 players to play, so we create and add them here
         instance.getPlayers().add(new WarPlayer("Test Player 1"));
         instance.getPlayers().add(new WarPlayer("Test Player 2"));
         
-        // Now it can run the play method without crashing
         instance.play();
         
-        // If the game finishes without throwing an error, the test passes
         assertTrue(true);
         
         // TODO review the generated test code and remove the default call to fail.
@@ -70,7 +66,6 @@ public class WarGameTest {
     public void testDeclareWinner() {
         System.out.println("declareWinner");
         
-        // FIX: Create a real WarGame object instead of null
         WarGame instance = new WarGame("Test Game");
         
         WarPlayer p1 = new WarPlayer("Test Player 1");
@@ -79,13 +74,11 @@ public class WarGameTest {
         instance.getPlayers().add(p1);
         instance.getPlayers().add(p2);
         
-        // FIX: Give P1 a card so they have a higher score than P2, avoiding an empty tie
         p1.getPlayerPile().getCards().add(new WarCard("Hearts", 14));
         
         // Run the declareWinner method
         instance.declareWinner();
         
-        // If it prints the winner without crashing, the test passes
         assertTrue(true);
         
         // TODO review the generated test code and remove the default call to fail.
