@@ -46,7 +46,7 @@ public class Main {
         // Start the game loop
         myGame.play();
         
-        // Close the scanner to prevent resource leaks
+        
         input.close();
     }
 }

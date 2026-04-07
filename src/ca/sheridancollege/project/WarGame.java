@@ -15,7 +15,7 @@ package ca.sheridancollege.project;
 import java.util.ArrayList;
 
 public class WarGame extends Game {
-    private final int MAX_ROUNDS = 500; // Matches your Use Case termination condition
+    private final int MAX_ROUNDS = 500; // terminate after 500 rounds.
 
     public WarGame(String name) {
         super(name);
@@ -111,7 +111,7 @@ public class WarGame extends Game {
         }
     }
 
-    // Helper: Creates the 52 card deck and deals 26 to each player
+    // Creates the 52 card deck and deals 26 to each player
     private void initializeDeck(WarPlayer p1, WarPlayer p2) {
         GroupOfCards deck = new GroupOfCards(52);
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
@@ -129,7 +129,7 @@ public class WarGame extends Game {
         }
     }
 
-    // Helper: Moves cards from Won Pile to Draw Pile if Draw Pile is empty
+    // Moves cards from Won Pile to Draw Pile if Draw Pile is empty
     private void reloadHandIfNeeded(WarPlayer p) {
         if (p.getPlayerPile().getSize() == 0 && p.getWonPile().getSize() > 0) {
             p.getWonPile().shuffle();
@@ -138,12 +138,12 @@ public class WarGame extends Game {
         }
     }
 
-    // Helper: Checks if a player has any cards left anywhere
+    // Checks if a player has any cards left anywhere
     private boolean hasCards(WarPlayer p) {
         return (p.getPlayerPile().getSize() + p.getWonPile().getSize()) > 0;
     }
 
-    // Use Case 5: Declare Winner
+    // Declare Winner
     @Override
     public void declareWinner() {
         WarPlayer p1 = (WarPlayer) getPlayers().get(0);

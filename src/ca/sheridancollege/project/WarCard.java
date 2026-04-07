@@ -13,7 +13,7 @@ package ca.sheridancollege.project;
  */
 public class WarCard extends Card {
     private String suit;
-    private int rank; // Let's use 2-14 where 11=Jack, 12=Queen, 13=King, 14=Ace
+    private int rank; // using 2-14 where 11=Jack, 12=Queen, 13=King, 14=Ace
 
     public WarCard(String suit, int rank) {
         this.suit = suit;

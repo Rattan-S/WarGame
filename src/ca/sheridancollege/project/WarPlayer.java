@@ -29,7 +29,6 @@ public class WarPlayer extends Player {
 
     @Override
     public void play() {
-        // In War, "playing" just means we will pop a card off the playerPile
-        // We will handle the actual logic in the WarGame class to keep it cohesive!
+        
     }
 }
