@@ -15,7 +15,10 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author rattansingh
+ * @author Rattan Singh
+ * @author Abhinav
+ * @author Dilpreet Kaur
+ * @author Yuvraj
  */
 public class MainTest {
     
