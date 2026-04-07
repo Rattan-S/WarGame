@@ -1,5 +1,13 @@
 package ca.sheridancollege.project;
 
+/**
+ *
+ * @author Rattan Singh
+ * @author Abhinav
+ * @author Dilpreet Kaur
+ * @author Yuvraj
+ */
+
 public class WarPlayer extends Player {
     private GroupOfCards playerPile;
     private GroupOfCards wonPile;

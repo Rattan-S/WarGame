@@ -4,6 +4,14 @@
  */
 package ca.sheridancollege.project;
 
+
+/**
+ *
+ * @author Rattan Singh
+ * @author Abhinav
+ * @author Dilpreet Kaur
+ * @author Yuvraj
+ */
 import java.util.ArrayList;
 
 public class WarGame extends Game {

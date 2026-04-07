@@ -15,6 +15,11 @@ import java.util.Collections;
  * @author dancye
  * @author Paul Bonenfant
  * @author Prem Parashar
+ * 
+ * @modifier Rattan Singh
+ * @modifier Abhinav
+ * @modifier Dilpreet Kaur
+ * @modifier Yuvraj
  */
 public class GroupOfCards {
     private ArrayList<Card> cards;

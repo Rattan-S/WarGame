@@ -11,6 +11,11 @@ package ca.sheridancollege.project;
  * @author dancye
  * @author Paul Bonenfant
  * @author Prem Parashar
+ * 
+ * @modifier Rattan Singh
+ * @modifier Abhinav
+ * @modifier Dilpreet Kaur
+ * @modifier Yuvraj
  */
 public abstract class Player {
     private String name;

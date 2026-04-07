@@ -6,7 +6,10 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author rattansingh
+ * @author Rattan Singh
+ * @author Abhinav
+ * @author Dilpreet Kaur
+ * @author Yuvraj
  */
 public class WarCard extends Card {
     private String suit;

@@ -10,6 +10,11 @@ package ca.sheridancollege.project;
  * game. Students wishing to add to the code should remember to add themselves as a modifier.
  * @author Prem Parashar
  * @author dancye
+ * 
+ * @modifier Rattan Singh
+ * @modifier Abhinav
+ * @modifier Dilpreet Kaur
+ * @modifier Yuvraj
  */
 public abstract class Card {
     //default modifier for child classes
